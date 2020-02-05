@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public class InMemoryTimeEntryRepository implements TimeEntryRepository {
+public class InMemoryTimeEntryRepository  {
 
     private final Map<Long, TimeEntry> TIME_ENTRY_MAP = new HashMap<>();
 
-    @Override
+   // @Override
     public TimeEntry create(TimeEntry timeEntry)
     {
         Long newIndex = TIME_ENTRY_MAP.keySet().size() + 1L;
@@ -21,7 +21,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         return TIME_ENTRY_MAP.get(newIndex);
     }
 
-    @Override
+  //  @Override
     public TimeEntry update(Long id, TimeEntry updatedTimeEntry) {
         TimeEntry returnValue = null;
 
@@ -34,18 +34,18 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         return returnValue;
     }
 
-    @Override
+  //  @Override
     public void delete(Long id)
     {
         TIME_ENTRY_MAP.remove(id);
     }
 
-    @Override
+   // @Override
     public List<TimeEntry> list() {
         return new ArrayList<TimeEntry>(TIME_ENTRY_MAP.values());
     }
 
-    @Override
+   // @Override
     public TimeEntry find(Long id)
     {
         TimeEntry returnValue = null;

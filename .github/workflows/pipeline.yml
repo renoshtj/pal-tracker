@@ -72,8 +72,8 @@ jobs:
         cf login -a "$CF_API_URL" -o "$CF_ORG" -s "$CF_SPACE" -u "$CF_USERNAME" -p "$CF_PASSWORD"
         scripts/migrate-databases.sh pal-tracker .
       env:
-        CF_API_URL: ${{ secrets.CF_API_URL }}
-        CF_ORG: ${{ secrets.CF_ORG }}
-        CF_SPACE: ${{ secrets.CF_SPACE }}
-        CF_USERNAME: ${{ secrets.CF_USERNAME }}
-        CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
+        CF_API_URL: "https://api.run.pivotal.io"
+        CF_ORG: "uki-engineering"
+        CF_SPACE: "Renosh ThomasJoseph"
+        CF_USERNAME: "renosh.thomasjoseph@cognizant.com"
+        CF_PASSWORD: "Ren@0420"
